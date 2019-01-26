@@ -1,0 +1,35 @@
+public class automate {
+
+	 public static void main(String[] args) 
+	   {
+		   System.setProperty("webdriver.chrome.driver", "C:\\Users\\anoop\\Downloads\\selenium\\chromedriver.exe"); 
+	       WebDriver driver = new ChromeDriver();
+	       driver.manage().window().maximize();
+//	       String url = "https://accounts.google.com/signin";
+//	       driver.get(url);
+	       
+//	       driver.findElement(By.id("identifierId")).sendKeys("cp8805"); 
+//	       driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);      
+//	       WebDriverWait wait=new WebDriverWait(driver, 20);               
+//	       driver.findElement(By.xpath("")).click();         
+//	       driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);        
+//	       driver.findElement(By.xpath("//input[@class='whsOnd zHQkBf']")).sendKeys("xxxxxx");             
+//	       driver.findElement(By.xpath("//span[@class='RveJvd snByac']")).click(); 
+	       
+	       String url = "https://www.facebook.com";
+	       driver.get(url); 
+	       driver.findElement(By.id("email")).sendKeys("fakeemail@crossbrowsertesting.com"); 
+	       driver.findElement(By.id("pass")).sendKeys("fakepassword1"); 
+	       driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);      
+	       WebDriverWait wait=new WebDriverWait(driver, 20);               
+	      driver.findElement(By.id("loginbutton")).click();         
+	       driver.manage().timeouts().implicitlyWait(40, TimeUnit.SECONDS);        
+	      driver.findElement(By.xpath("//input[@class='whsOnd zHQkBf']")).sendKeys("xxxxxx");             
+	       driver.findElement(By.xpath("//span[@class='RveJvd snByac']")).click(); 
+	    
+	       //   driver.get (“https://www.facebook.com”)
+//	    	   driver.find_element_by_id(“email”).send_keys(‘fakeemail@crossbrowsertesting.com’)
+//	    	   driver.find_element_by_id(“pass”).send_keys(“fakepassword1”)
+//	    	   driver.find_element_by_id(“loginbutton”).click()
+	   }  
+}
